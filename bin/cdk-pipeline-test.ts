@@ -1,7 +1,9 @@
 #!/usr/bin/env node
 import 'source-map-support/register';
 import * as cdk from '@aws-cdk/core';
-import { CdkPipelineTestStack } from '../lib/cdk-pipeline-test-stack';
+import { CdkpipelineTestStack } from '../lib/cdk-pipeline-test-stack';
+import { DemoPipelineStack } from '../lib/pipeline-demo-stack';
 
 const app = new cdk.App();
-new CdkPipelineTestStack(app, 'CdkPipelineTestStack');
+new CdkpipelineTestStack(app, 'CdkPipelineTestStack');
+new DemoPipelineStack(app, 'cdk-pipeline-test');
